@@ -1,8 +1,9 @@
+import "./assets/style/style.css";
+
 function App() {
    return (
-      <div className="App">
-         <h1>advice generator</h1>
-      </div>
+      <>
+      </>
    );
 }
 
