@@ -27,17 +27,8 @@ body {
    font-weight: 400;
    line-height: 1.7;
    overflow-x: hidden;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-   font-family: "Montserrat", sans-serif;
-   font-weight: 500;
-   line-height: 1;
+   background-color: $darkBlue;
+   color: $lightCyan;
 }
 
 a {
@@ -107,4 +98,54 @@ footer {
    width: 90%;
    max-width: 1100px;
    margin-inline: auto;
+}
+
+/* layout */
+
+.app {
+   display: grid;
+   align-items: center;
+   min-height: 100vh;
+
+   .container {
+      max-width: 35%;
+      text-align: center;
+      background-color: $grayishBlue;
+      padding: 2em 2em 4em 2em;
+      border-radius: 1em;
+      position: relative;
+   }
+
+   .advice-num {
+      color: $neonGreen;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+   }
+
+   .advice {
+      margin-top: 1em;
+      line-height: 1.2;
+      font-weight: 500;
+   }
+
+   .divider {
+      margin-top: 2.5em;
+
+      img {
+         margin-inline: auto;
+      }
+   }
+
+   .button {
+      position: absolute;
+      left: 50%;
+      bottom: -2.3em;
+      transform: translateX(-50%);
+
+      padding: 1.5em;
+      background-color: $neonGreen;
+      border-radius: 100vmax;
+      cursor: pointer;
+   }
 }
