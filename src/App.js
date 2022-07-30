@@ -6,33 +6,33 @@ import { useState } from "react";
 function App() {
    const [advice, setAdvice] = useState([
       "It is easy to sit up and take notice, what is difficult is geting up and taking action.",
-      "lorem ",
-      "three",
-      "four",
-      "five",
-      "six",
-      "seven",
-      "eight",
-      "nine",
-      "then",
+      "Ad mea simul timeam evertitur, no mei congue cotidieque. Ex duo alii principes assueverit, an percipit liberavisse quo.",
+      "Meis nonumy quaeque ea cum, per cibo movet posidonium cu. Sint ponderum quo in.",
+      "Eos te justo postulant, mei nulla probatus efficiendi ut, qui alia gubergren vituperata ne. Dicam deserunt duo ut.",
+      "It's a convenient tool for mock-ups. It helps to outline the visual elements of a document or presentation.",
+      "Vel esse nostrud cu, ne omnes labore temporibus nec, quo posse invidunt ad. Vel ea equidem invidunt.",
+      "Eum cetero conclusionemque ei, in suas mentitum eum. Diam nullam eum no, dicant principes maiestatis eum an.",
+      "Ut ius munere tritani, qui fabulas iudicabit at. Sea brute vivendum ei. Duo ex feugiat repudiare reformidans.",
+      "Eu mea mucius laoreet elaboraret. Meis nihil vitae cu vim, vim ne nisl hinc iracundia. Stet voluptatibus id per.",
+      "It's also called placeholder (or filler) text. It's a convenient tool for mock-ups.",
    ]);
 
    const [newAdvice, setNewAdvice] = useState(null);
-   const [adviceNum, setAdviceNum] = useState(0);
+   const [adviceNum, setAdviceNum] = useState(undefined);
 
    const showAdvice = () => {
-      let index = Math.floor(Math.random() * 10);
+      let index = Math.floor(Math.random() * advice.length);
 
       setNewAdvice(advice[index]);
-      setAdviceNum(index + 1)
+      setAdviceNum(index + 1);
    };
 
    return (
       <main className="app">
          <div className="container">
-            <h3 className="advice-num">advice #{adviceNum}</h3>
+            <h3 className="advice-num">advice #{!adviceNum ? 1 : adviceNum}</h3>
 
-            <h1 className="advice">{newAdvice}</h1>
+            <p className="advice">{!newAdvice ? advice[0] : newAdvice}</p>
 
             <div className="divider">
                <img src={divider} alt="" />
